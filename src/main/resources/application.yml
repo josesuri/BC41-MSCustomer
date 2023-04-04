@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ms-customer
+  profiles:
+    active:
+      - dev #(2)
+  config:
+    import: optional:configserver:http://localhost:9010
+    #import: optional:configserver:http://config-server:9010
+  cloud:
+    config:
+      profile: dev
+
+
+# CONFIGURACION PERSONAL
+#spring:
+#  application:
+#    name: ms-customer
+#  cloud:
+#    config:
+#      enabled: true
+#      uri: http://localhost:8082
